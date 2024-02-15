@@ -8,18 +8,20 @@
 #include <algorithm>
 #include <cstdlib>
 
-void displayLoadingBar(int progress, int total) {
+void displayLoadingBar(int progress, int total)
+{
     int barWidth = 70;
-
     float fraction = static_cast<float>(progress) / total;
     int progressWidth = static_cast<int>(barWidth * fraction);
 	
     std::cout << "[" << BLUE;
-    for (int i = 0; i < progressWidth; ++i) {
+    for (int i = 0; i < progressWidth; ++i)
+    {
         std::cout << "|";
     }
 	std::cout << RESET;
-    for (int i = progressWidth; i < barWidth; ++i) {
+    for (int i = progressWidth; i < barWidth; ++i)
+    {
         std::cout << " ";
     }
     std::cout << "] " << static_cast<int>(fraction * 100.0) << "%\r";
