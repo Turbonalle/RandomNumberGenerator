@@ -14,7 +14,7 @@
 
 ###
 
-<p align="left">Had a couple school projects where we had to sort numbers. Finding an appropriate online number generator was always a hazzle, having to choose amount of columns, not knowing if newlines'd be included or not. Therefore I decided to create my own simple number generator where every number will be separated by a space (no newlines).</p>
+<p align="left">Had a couple school projects where we had to sort numbers. Finding an appropriate online number generator was always a hazzle, having to choose amount of columns, not knowing if newlines'd be included or not. Therefore I decided to create my own simple number generator, for anyone who's not a shell scripting wizard, where every number will be separated by a space (no newlines).</p>
 
 ###
 
