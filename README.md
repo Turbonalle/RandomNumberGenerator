@@ -29,5 +29,5 @@
 <h2 align="left">Install</h2>
 
 ###
-
+```git clone```
 <p align="left">- ```git clone``` into folder of choice<br>- ```cd``` into the cloned folder<br>- Run ```make``` to compile the program<br>- ```./RNG``` to run program</p>
