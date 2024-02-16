@@ -30,4 +30,4 @@
 
 ###
 
-<p align="left">- `git clone` into folder of choice<br>- `cd` into the cloned folder<br>- Run `make` to compile the program<br>- `./RNG` to run program</p>
+<p align="left">- ```git clone``` into folder of choice<br>- ```cd``` into the cloned folder<br>- Run ```make``` to compile the program<br>- ```./RNG``` to run program</p>
