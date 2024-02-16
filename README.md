@@ -6,7 +6,7 @@
 
 ###
 
-<p align="left">Just a simple program that does exactly what the name says. Want a quick and reliable way to generate numbers? You got it! :)</p>
+<p align="left">Just a simple program that does exactly what the name says. Want a quick and reliable way to generate random numbers? You got it! :)</p>
 
 ###
 
