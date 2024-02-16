@@ -33,6 +33,38 @@ bool isAllDigits(const std::string &str)
 	return std::all_of(str.begin(), str.end(), ::isdigit);
 }
 
+void fillWithDuplicates(std::vector<int> &vec, size_t n)
+{
+	int progress = 0;
+	for (size_t i = 0; i < n; ++i)
+	{
+		int num = rand() % n;
+		vec.push_back(num);
+		progress++;
+		displayLoadingBar(progress, n);
+	}
+}
+
+void fillWithoutDuplicates(std::vector<int> &vec, size_t n)
+{
+	std::vector<int> temp;
+	int randomIndex;
+	int progress = 0;
+
+	for (size_t i = 0; i < n; ++i)
+	{
+		temp.push_back(i);
+	}
+	for (size_t i = 0; i < n; ++i)
+	{
+		randomIndex = rand() % temp.size();
+		vec.push_back(temp[randomIndex]);
+		temp.erase(temp.begin() + randomIndex);
+		progress++;
+		displayLoadingBar(progress, n);
+	}
+}
+
 int main()
 {
     std::vector<int> vec;
@@ -58,29 +90,13 @@ int main()
 	std::cout << std::endl;
     std::cout << color("Generating random numbers...", YELLOW) << std::endl;
 
-    int progress = 0;
     if (duplicate == "y")
 	{
-        while (vec.size() < n)
-		{
-            int num = rand() % n;
-            vec.push_back(num);
-            ++progress;
-            displayLoadingBar(progress, n);
-        }
+		fillWithDuplicates(vec, n);
     }
 	else
 	{
-        while (vec.size() < n)
-		{
-            int num = rand() % n;
-            if (std::find(vec.begin(), vec.end(), num) == vec.end())
-			{
-                vec.push_back(num);
-                ++progress;
-                displayLoadingBar(progress, n);
-            }
-        }
+		fillWithoutDuplicates(vec, n);
     }
 	std::cout << std::endl;
 	std::cout << color("[SUCCESS]", GREEN) << std::endl;
